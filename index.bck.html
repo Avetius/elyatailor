@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elya Atelier</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    .custom-navbar {
+      background-color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+      backdrop-filter: blur(10px); /* Optional: adds frosted-glass effect */
+    }
+
+    .hero {
+      background: url('/Images/IMG_0223.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .footer {
+      background: #343a40;
+      color: white;
+      padding: 20px 0;
+    }
+
+    /* Make arrows black */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 16 16'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L6.707 7l4.647 4.646a.5.5 0 0 1-.708.708l-5-5a.5.5 0 0 1 0-.708l5-5a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
+    }
+
+    /* Move arrows outside */
+    .carousel-control-prev {
+      left: -50px;
+    }
+
+    .carousel-control-next {
+      right: -50px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+      background: none;
+    }
+
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+  <div class="container d-flex align-items-center justify-content-between">
+    
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="./Images/logo.png" alt="Tailor Shop Logo" height="40" class="me-2">
+      <span class="fw-bold fs-4"> Elya Atelier</span>
+    </a>
+
+    <!-- Center Info (Horizontal Layout) -->
+    <div class="d-none d-lg-flex align-items-center justify-content-center mx-auto text-center gap-4">
+      
+      <!-- Address -->
+      <div class="d-flex align-items-center">
+        <i class="bi bi-geo-alt me-1"></i>
+        <small>1365 E Colorado St, Glendale, CA 91205</small>
+      </div>
+
+      <!-- Phone -->
+      <div class="d-flex align-items-center">
+        <i class="bi bi-telephone me-1"></i>
+        <small>(818) 555-7890</small>
+      </div>
+
+      <!-- Social Links -->
+      <div class="d-flex align-items-center">
+        <a href="https://instagram.com/yourprofile" target="_blank" class="text-dark me-3">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://facebook.com/yourpage" target="_blank" class="text-dark me-3">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://wa.me/18185557890" target="_blank" class="text-dark">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Nav Links -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Language Switcher -->
+        <!-- Language Switcher With Flags -->
+        <li class="nav-item dropdown">
+          <!-- Nav Links -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <!-- Language Switcher -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-bs-toggle="dropdown">
+                  Language
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item lang-select" href="#" data-lang="en">English</a></li>
+                  <li><a class="dropdown-item lang-select" href="#" data-lang="es">Español</a></li>
+                  <li><a class="dropdown-item lang-select" href="#" data-lang="ru">Русский</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero section -->
+<section class="hero-image text-center position-relative">
+    <img src="./Images/IMG_0223.webp" alt="Tailor Shop" class="img-fluid w-100" />
+
+  <!-- Overlay Text -->
+  <div class="position-absolute start-50 translate-middle-x text-black" style="top: 60%;">
+    <h1 id="hero">Custom Tailoring for Every Style</h1>
+    <p id="hero-p">Expert craftsmanship. Perfect fit. Timeless fashion.</p>
+  </div>
+</section>
+
+<!-- About Us -->
+<section id="about" class="py-5">
+  <div class="container text-center">
+    <h2 id="about-title">About Us</h2>
+    <p id="about-subtitle">We specialize in custom tailoring, alterations, and bespoke designs for men and women. Over 20 years of craftsmanship and customer satisfaction.</p>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 id="our֊services">Our Services</h2>
+    <div class="row">
+      <div class="col-md-3 mb-4">
+        <img src="./Images/tailoring.png" alt="Tailoring" class="img-fluid mb-2" style="height: 100px; object-fit: cover;">
+        <h5 id="tailoring">Tailoring & Alterations</h5>
+        <p id="tailoring-p">Suits, pants, shirts, and formal wear tailored for a perfect fit.</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <img src="./Images/Dance.png" alt="Stage Wear" class="img-fluid mb-2" style="height: 100px; object-fit: cover;">
+        <h5 id="stage-costumes">Stage & Dance Costumes</h5>
+        <p id="stage-costumes-p">Custom outfits for performers, dancers, and theatrical productions.</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <img src="./Images/Elegant_Evening.png" alt="Evening Dress" class="img-fluid mb-2" style="height: 100px; object-fit: cover;">
+        <h5 id="evening-wear">Evening & Formal Wear</h5>
+        <p id="evening-wear-p">Gowns, dresses, and elegant attire for any special occasion.</p>
+      </div>
+      <div class="col-md-3 mb-4">
+        <img src="./Images/IMG_0223.webp" alt="Everyday Clothing" class="img-fluid mb-2" style="height: 100px; object-fit: cover;">
+        <h5 id="everyday֊clothing">Everyday Clothing</h5>
+        <p id="everyday֊clothing-p">Stylish, comfortable, and custom-fitted daily wear for all ages.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Carousel -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4" id="fabrics">Fabrics and Wears</h2>
+
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000" data-bs-pause="false">
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <img src="./Images/IMG_0228.webp" class="d-block w-100 img-fluid" alt="1">
+            </div>
+            <div class="col-6 col-md-3">
+              <img src="./Images/IMG_0255.webp" class="d-block w-100 img-fluid" alt="2">
+            </div>
+            <div class="col-6 col-md-3">
+              <img src="./Images/IMG_0256.webp" class="d-block w-100 img-fluid" alt="3">
+            </div>
+            <div class="col-6 col-md-3">
+              <img src="./Images/IMG_0257.webp" class="d-block w-100 img-fluid" alt="4">
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row">
+            <div class="col-6 col-md-3">
+              <img src="./Images/IMG_0259.webp" class="d-block w-100 img-fluid" alt="5">
+            </div>
+            <div class="col-6 col-md-3">
+              <img src="./Images/IMG_0260.webp" class="d-block w-100 img-fluid" alt="6">
+            </div>
+            <div class="col-6 col-md-3">
+              <img src="./Images/IMG_0261.webp" class="d-block w-100 img-fluid" alt="7">
+            </div>
+            <div class="col-6 col-md-3">
+              <img src="./Images/IMG_0254.webp" class="d-block w-100 img-fluid" alt="8">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center" id="contact-us">Contact Us</h2>
+
+  <!-- Embedded Google Map -->
+  <div class="mb-4 text-center">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3303.2465271893537!2d-118.23433028488214!3d34.139268980579144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c3f05bbbf353%3A0x63b4c208bcac6b9!2s1365%20E%20Colorado%20St%2C%20Glendale%2C%20CA%2091205%2C%20USA!5e0!3m2!1sen!2sus!4v1718231234567"
+      width="100%"
+      height="300"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+
+    <!-- Address and Contact Info -->
+    <div class="text-center mb-4">
+      <p class="mb-1" id="address"><strong>Address:</strong> 1365 E Colorado St, Glendale, CA 91205</p>
+      <p class="mb-0" id="phone"><strong>Phone:</strong> (415) 555-1234</p>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="row g-3 mt-4">
+      <div class="col-md-6">
+        <input type="text" class="form-control" placeholder="Your Name" required />
+      </div>
+      <div class="col-md-6">
+        <input type="email" class="form-control" placeholder="Email Address" required />
+      </div>
+      <div class="col-12">
+        <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+      </div>
+      <div class="col-12 text-center">
+        <button type="submit" class="btn btn-dark px-5">Send</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer text-center">
+  <div class="container">
+    <div class="mb-2">
+      <!-- Social Icons -->
+      <a href="https://instagram.com/yourprofile" target="_blank" class="text-white me-3">
+        <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+      </a>
+      <a href="https://facebook.com/yourpage" target="_blank" class="text-white me-3">
+        <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+      </a>
+      <a href="https://wa.me/1234567890" target="_blank" class="text-white">
+        <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i>
+      </a>
+      <a href="mailto:info@tailorshop.com" class="text-white me-3">
+        <i class="bi bi-envelope-fill" style="font-size: 1.5rem;"></i> info@tailorshop.com
+      </a>
+    </div>
+    <p class="mb-0">&copy; 2025 TailorShop. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  const translations = {
+    en: {
+      "hero-title": "Custom Tailoring for Every Style",
+      "hero-subtitle": "Expert craftsmanship. Perfect fit. Timeless fashion.",
+      "hero": "Custom Tailoring for Every Style",
+      "hero-p": "Expert craftsmanship. Perfect fit. Timeless fashion.",
+      "about-nav": "About",
+      "services-nav": "Services",
+      "gallery-nav": "Gallery",
+      "contact-nav": "Contact",
+      "about-title": "About Us",
+      "about-subtitle": "We specialize in custom tailoring, alterations, and bespoke designs for men and women. Over 20 years of craftsmanship and customer satisfaction.",
+      "our֊services": "Our Services",
+      "tailoring": "Tailoring & Alterations",
+      "tailoring-p": "Suits, pants, shirts, and formal wear tailored for a perfect fit.",
+      "stage-costumes": "Stage & Dance Costumes",
+      "stage-costumes-p": "Custom outfits for performers, dancers, and theatrical productions.",
+      "evening-wear": "Evening & Formal Wear",
+      "evening-wear-p": "Gowns, dresses, and elegant attire for any special occasion.",
+      "everyday֊clothing": "Everyday Clothing",
+      "everyday֊clothing֊p": "Stylish, comfortable, and custom-fitted daily wear for all ages.",
+      "fabrics": "Fabrics and Wears",
+      "contact-us": "Contact Us",
+      "address": "Address:",
+      "phone": "Phone:",
+    },
+    es: {
+      "hero-title": "Confección a medida para cada estilo",
+      "hero-subtitle": "Artesanía experta. Ajuste perfecto. Moda atemporal.",
+      "hero": "Confección a medida para cada estilo",
+      "hero-p": "Artesanía experta. Ajuste perfecto. Moda atemporal.",
+      "about-nav": "Acerca de",
+      "services-nav": "Servicios",
+      "gallery-nav": "Galería",
+      "contact-nav": "Contacto",
+      "about-title": "Sobre Nosotros",
+      "about-subtitle": "Nos especializamos en confección a medida, alteraciones y diseños personalizados para hombres y mujeres. Más de 20 años de experiencia y satisfacción del cliente.",
+      "our֊services": "Nuestros Servicios",
+      "tailoring": "Confección y Alteraciones",
+      "tailoring-p": "Trajes, pantalones, camisas y ropa formal hecha a medida para un ajuste perfecto.",
+      "stage-costumes": "Vestuario de Escena y Baile",
+      "stage-costumes-p": "Vestuario personalizado para artistas, bailarines y producciones teatrales.",
+      "evening-wear": "Ropa de Noche y Formal",
+      "evening-wear-p": "Vestidos de gala, ropa elegante para cualquier ocasión especial.",
+      "everyday֊clothing": "Ropa Diaria",
+      "everyday֊clothing֊p": "Ropa diaria con estilo, cómoda y hecha a medida para todas las edades.",
+      "fabrics": "Telas y Prendas",
+      "contact-us": "Contáctanos",
+      "address": "Dirección:",
+      "phone": "Teléfono:"
+    },
+    ru: {
+      "hero-title": "Индивидуальный пошив для любого стиля",
+      "hero-subtitle": "Профессиональное мастерство. Идеальная посадка. Вневременная мода.",
+      "hero": "Индивидуальный пошив для любого стиля",
+      "hero-p": "Профессиональное мастерство. Идеальная посадка. Вневременная мода.",
+      "about-nav": "О нас",
+      "services-nav": "Услуги",
+      "gallery-nav": "Галерея",
+      "contact-nav": "Контакты",
+      "about-title": "О Нас",
+      "about-subtitle": "Мы специализируемся на индивидуальном пошиве, переделках и эксклюзивных дизайнерских решениях для мужчин и женщин. Более 20 лет опыта и довольных клиентов.",
+      "our֊services": "Наши Услуги",
+      "tailoring": "Пошив и Переделки",
+      "tailoring-p": "Костюмы, брюки, рубашки и формальная одежда, сшитые по индивидуальным меркам.",
+      "stage-costumes": "Сценические и Танцевальные Костюмы",
+      "stage-costumes-p": "Индивидуальные костюмы для артистов, танцоров и театральных постановок.",
+      "evening-wear": "Вечерняя и Официальная Одежда",
+      "evening-wear-p": "Платья, наряды и элегантная одежда для особых случаев.",
+      "everyday֊clothing": "Повседневная Одежда",
+      "everyday֊clothing֊p": "Стильная, удобная и индивидуально сшитая повседневная одежда для всех возрастов.",
+      "fabrics": "Ткани и Одежда",
+      "contact-us": "Связаться с Нами",
+      "address": "Адрес:",
+      "phone": "Телефон:"
+    },
+    am: {
+      "hero-title": "Անհատական կար յուրաքանչյուր ոճի համար",
+      "hero-subtitle": "Վարպետություն, կատարյալ հարմարեցում և անժամանցելի մոդա։",
+      "hero": "Անհատական կար յուրաքանչյուր ոճի համար",
+      "hero-p": "Վարպետություն, կատարյալ հարմարեցում և անժամանցելի մոդա։",
+      "about-nav": "Մեր մասին",
+      "services-nav": "Ծառայություններ",
+      "gallery-nav": "Պատկերասրահ",
+      "contact-nav": "Կապ",
+      "about-title": "Մեր Մասին",
+      "about-subtitle": "Մենք մասնագիտացած ենք անհատական կարի, փոփոխությունների և յուրահատուկ դիզայնների մեջ՝ ինչպես կանանց, այնպես էլ տղամարդկանց համար։ Ավելի քան 20 տարվա փորձ և հաճախորդների գոհունակություն։",
+      "our֊services": "Մեր Ծառայությունները",
+      "tailoring": "Անհատական կար և փոփոխություններ",
+      "tailoring-p": "Կոստյումներ, տաբատներ, վերնաշապիկներ և հանդիսավոր հագուստ՝ կարված հարմարեցված ձևով։",
+      "stage-costumes": "Բեմական և Պարային Հագուստ",
+      "stage-costumes-p": "Անհատական հագուստներ արտիստների, պարողների և թատերական ներկայացումների համար։",
+      "evening-wear": "Երեկոյան և Պաշտոնական Հագուստ",
+      "evening-wear-p": "Երեկոյան զգեստներ և շքեղ հագուստ՝ հատուկ առիթների համար։",
+      "everyday֊clothing": "Ամենօրյա Հագուստ",
+      "everyday֊clothing֊p": "Ժամանակակից, հարմարավետ և անհատապես կարված հագուստ՝ բոլոր տարիքի մարդկանց համար։",
+      "fabrics": "Տեքստիլ և Հագուստ",
+      "contact-us": "Կապվեք մեզ հետ",
+      "address": "Հասցե՝",
+      "phone": "Հեռախոս՝"
+    },
+    ko: {
+      "hero-title": "모든 스타일을 위한 맞춤 재단",
+      "hero-subtitle": "전문적인 장인 정신. 완벽한 핏. 시대를 초월한 패션.",
+      "hero": "모든 스타일을 위한 맞춤 재단",
+      "hero-p": "전문적인 장인 정신. 완벽한 핏. 시대를 초월한 패션.",
+      "about-nav": "소개",
+      "services-nav": "서비스",
+      "gallery-nav": "갤러리",
+      "contact-nav": "문의하기",
+      "about-title": "회사 소개",
+      "about-subtitle": "남성과 여성을 위한 맞춤 재단, 수선 및 주문형 디자인을 전문으로 합니다. 20년 이상의 장인 경험과 고객 만족을 자랑합니다.",
+      "our֊services": "서비스 안내",
+      "tailoring": "맞춤 재단 및 수선",
+      "tailoring-p": "정장, 바지, 셔츠 및 포멀 웨어를 완벽하게 맞춤 제작합니다.",
+      "stage-costumes": "무대 및 댄스 의상",
+      "stage-costumes-p": "공연자, 무용수 및 연극을 위한 맞춤 의상 제작.",
+      "evening-wear": "이브닝 및 포멀 웨어",
+      "evening-wear-p": "이브닝 드레스, 우아한 의상 등 특별한 날을 위한 고급 의상.",
+      "everyday֊clothing": "일상복",
+      "everyday֊clothing֊p": "모든 연령을 위한 스타일리시하고 편안한 맞춤형 일상복.",
+      "fabrics": "원단 및 의류",
+      "contact-us": "문의하기",
+      "address": "주소:",
+      "phone": "전화:"
+    },
+    cn: {
+      "hero-title": "为每一种风格量身定制",
+      "hero-subtitle": "专业工艺，完美贴合，永不过时的时尚。",
+      "hero": "为每一种风格量身定制",
+      "hero-p": "专业工艺，完美贴合，永不过时的时尚。",
+      "about-nav": "关于我们",
+      "services-nav": "服务",
+      "gallery-nav": "画廊",
+      "contact-nav": "联系我们",
+      "about-title": "关于我们",
+      "about-subtitle": "我们专注于为男女提供定制服装、修改服务和专属设计。拥有超过20年的专业经验和客户满意度。",
+      "our֊services": "我们的服务",
+      "tailoring": "定制服装与修改",
+      "tailoring-p": "量身定制西装、裤子、衬衫和正装，完美贴合。",
+      "stage-costumes": "舞台与舞蹈服装",
+      "stage-costumes-p": "为演员、舞者和舞台表演提供定制服装。",
+      "evening-wear": "晚礼服与正式服装",
+      "evening-wear-p": "高雅的晚礼服和正式服装，适合各种特殊场合。",
+      "everyday֊clothing": "日常穿搭",
+      "everyday֊clothing֊p": "时尚、舒适并量身定制的日常服装，适合各个年龄段。",
+      "fabrics": "面料与服装",
+      "contact-us": "联系我们",
+      "address": "地址：",
+      "phone": "电话："
+    },
+    ir: {
+      "hero-title": "خیاطی سفارشی برای هر سبک",
+      "hero-subtitle": "مهارت حرفه‌ای، تناسب کامل، مدی ماندگار.",
+      "hero": "خیاطی سفارشی برای هر سبک",
+      "hero-p": "مهارت حرفه‌ای، تناسب کامل، مدی ماندگار.",
+      "about-nav": "درباره ما",
+      "services-nav": "خدمات",
+      "gallery-nav": "گالری",
+      "contact-nav": "تماس با ما",
+      "about-title": "درباره ما",
+      "about-subtitle": "ما در خیاطی سفارشی، اصلاحات و طراحی‌های اختصاصی برای آقایان و بانوان تخصص داریم. بیش از ۲۰ سال تجربه در کار حرفه‌ای و رضایت مشتریان.",
+      "our֊services": "خدمات ما",
+      "tailoring": "خیاطی و اصلاحات",
+      "tailoring-p": "کت و شلوار، شلوار، پیراهن و لباس رسمی با دوخت کاملاً متناسب.",
+      "stage-costumes": "لباس‌های صحنه و رقص",
+      "stage-costumes-p": "لباس‌های سفارشی برای هنرمندان، رقصندگان و اجراهای تئاتری.",
+      "evening-wear": "لباس‌های رسمی و شب",
+      "evening-wear-p": "لباس‌های شب و رسمی شیک برای مناسبت‌های خاص.",
+      "everyday֊clothing": "لباس‌های روزمره",
+      "everyday֊clothing֊p": "لباس‌های راحت و شیک روزمره برای تمام سنین، با دوخت اختصاصی.",
+      "fabrics": "پارچه‌ها و پوشاک",
+      "contact-us": "تماس با ما",
+      "address": "آدرس:",
+      "phone": "تلفن:"
+    },
+    is: {
+      "hero-title": "תפירה אישית לכל סגנון",
+      "hero-subtitle": "עבודת אומן מקצועית. התאמה מושלמת. אופנה על זמנית.",
+      "hero": "תפירה אישית לכל סגנון",
+      "hero-p": "עבודת אומן מקצועית. התאמה מושלמת. אופנה על זמנית.",
+      "about-nav": "אודות",
+      "services-nav": "שירותים",
+      "gallery-nav": "גלריה",
+      "contact-nav": "צור קשר",
+      "about-title": "אודותינו",
+      "about-subtitle": "אנו מתמחים בתפירה אישית, תיקונים ועיצובים בהתאמה אישית לגברים ולנשים. מעל 20 שנות ניסיון ומאות לקוחות מרוצים.",
+      "our֊services": "השירותים שלנו",
+      "tailoring": "תפירה ותיקונים",
+      "tailoring-p": "חליפות, מכנסיים, חולצות ובגדים רשמיים בתפירה מדויקת ומותאמת אישית.",
+      "stage-costumes": "תלבושות במה וריקוד",
+      "stage-costumes-p": "תלבושות בהתאמה אישית לאומנים, רקדנים והפקות תיאטרון.",
+      "evening-wear": "לבוש ערב ורשמי",
+      "evening-wear-p": "שמלות ערב ובגדים אלגנטיים לאירועים מיוחדים.",
+      "everyday֊clothing": "לבוש יומיומי",
+      "everyday֊clothing֊p": "בגדים יומיומיים נוחים, אופנתיים ובתפירה אישית לכל גיל.",
+      "fabrics": "בדים ולבוש",
+      "contact-us": "צור קשר",
+      "address": "כתובת:",
+      "phone": "טלפון:"
+    }
+  };
+
+  function applyTranslations(lang) {
+    const keys = translations[lang];
+    if (!keys) return;
+
+    for (const key in keys) {
+      const el = document.getElementById(key);
+      if (el) el.textContent = keys[key];
+    }
+  }
+try{
+  document.addEventListener("DOMContentLoaded", () => {
+    applyTranslations("en"); // default language
+
+    document.querySelectorAll(".lang-select").forEach(el => {
+      el.addEventListener("click", (e) => {
+        e.preventDefault();
+        const lang = el.getAttribute("data-lang");
+        applyTranslations(lang);
+      });
+    });
+  });
+} catch(e){ console.log('e->', e)}
+</script>
+
+</body>
+</html>
